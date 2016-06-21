@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="" />
+<meta name="copyright" content="" />
+<title></title>
+<style>
+body{
+	background: #2C5379;
+}
+*{
+	margin: 0;
+	padding:0;
+}
+#div1{
+	width: 990px;
+	height: 500px;
+	background:url(career-top.png) no-repeat;
+	position: relative;
+}
+#div1 div:nth-of-type(1){
+	width:900px;
+	height: 10px;
+	background:#2C5379;
+	position: absolute;
+	right:77px;
+	z-index:2;
+}
+#div1 div:nth-of-type(2){
+	width:74px;
+	height: 152px;
+	background:#2C5379;
+	position: absolute;
+	right:19px;
+	top:0;
+}
+#div1 div:nth-of-type(3){
+	width:770px;
+	height: 10px;
+	background:#2C5379;
+	position: absolute;
+	left:134px;
+	z-index:2;
+	top:141px;
+}
+#div1 div:nth-of-type(4){
+	width:74px;
+	height: 152px;
+	background:#2C5379;
+	position: absolute;
+	left:150px;
+	top:150px;
+}
+#div1 div:nth-of-type(5){
+	width:690px;
+	height: 10px;
+	background:#2C5379;
+	position: absolute;
+	right:92px;
+	top:283px;
+	z-index:2;
+}
+#div1 div:nth-of-type(6){
+	width:74px;
+	height: 152px;
+	background:#2C5379;
+	position: absolute;
+	right:29px;
+	top:284px;
+}
+</style>
+
+</head>
+
+<body>
+	<div id="div1">
+		<div class="make"></div>
+		<div class="make"></div>
+		<div class="make"></div>
+		<div class="make"></div>
+		<div class="make"></div>
+		<div class="make"></div>
+	</div>
+</body>
+<script src="jquery-1.11.1.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	var makes = $('.make');
+	
+	$(document).click(function(){
+		makes.eq(0).animate({width:0},800,function(){
+			makes.eq(1).animate({top:152},400,function(){
+				makes.eq(1).css({display:'none'})
+				makes.eq(2).animate({width:0},800,function(){
+					makes.eq(3).animate({top:292},400,function(){
+						makes.eq(4).animate({width:0},800,function(){
+							makes.eq(5).animate({top:380},400);
+						});
+					})
+				});
+			})
+		});
+	});
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
